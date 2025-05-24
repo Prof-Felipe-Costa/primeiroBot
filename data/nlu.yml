@@ -1,0 +1,66 @@
+version: "3.1"
+
+nlu:
+- lookup: materia
+  examples: |
+    - python
+    - inicial
+    - email
+
+- intent: saudacao
+  examples: |
+    - oi
+    - olá
+    - olá, tudo bem?
+    - olá, como você está?
+    - olá, como vai?
+    - oie
+    - bom dia
+    - boa tarde
+    - boa noite
+
+- intent: perdido
+  examples: |
+    - Estou perdido
+    - Estou perdido, não sei onde estou
+    - Estou perdido, não sei para onde ir
+    - Estou perdido, não sei o que fazer
+    - Estou perdido, não sei como chegar lá
+    - Estou perdido, não sei como chegar ao meu destino
+    - Estou perdido, não sei como chegar ao lugar certo
+    - Estou perdido, não sei como chegar ao meu destino final
+
+- intent: destino
+  examples: |
+    - Quero ir para o menu [inicial](materia)
+    - Quero ir para o menu email
+    - Quero ir para o menu python
+    - Quero ir para a pagina inicial
+    - quero ir para a pagina email
+    - quero ir para a pagina python
+
+
+- intent: agradecimento
+  examples: |
+    - Obrigado
+    - Valeu
+    - Valeu bot, você é demais
+    - Agradeço pela ajuda
+    - desde já agradeço
+    - vlw
+    - Muito obrigado pela ajuda
+    - obg
+    - você é top
+    - grato
+    
+- intent: finalizacao
+  examples: |
+    - Não, é só isso mesmo
+    - Não
+    - Só isso mesmo
+    - Somente isso
+    - Não preciso de mais nada
+    - não, era apenas isso
+    - Não, não preciso de mais nada no momento
+    - Não, não há mais nada que eu preciso
+    - Não, por enquanto é só isso mesmo

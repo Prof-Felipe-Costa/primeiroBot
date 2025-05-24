@@ -1,0 +1,66 @@
+version: '3.1'
+intents:
+- perdido
+- destino
+- agradecimento
+- finalizacao
+- saudacao
+entities:
+- materia
+slots:
+  lugar:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: materia
+responses:
+  utter_saudacao:
+  - text: Olá! Bem-vindo ao site primeiroBit. Como posso ajudar você hoje?
+  utter_agradecimento:
+  - text: Tenha um ótimo dia!
+  utter_finalizacao:
+  - text: De mais, ficamos felizes em ajudar.
+  utter_repetir_materia:
+  - text: Não consegui detectar a materia, favor reformular sua frase
+  utter_reformular:
+  - text: Me desculpe, não entendi o que você disse. Você poderia reformualar a sua frase?
+  utter_default:
+  - text: Desculpe eu não entendi, você pode reformular?
+  utter_perdido:
+  - text: Muito bem para onde você quer ir?
+  utter_destino:
+  - text: muito bem click no link abaixo ou copie e cole no seu navegador.
+  utter_confirmacao:
+  - text: Deseja algo mais?
+  utter_menu:
+    - condition:
+        - type: slot
+          name: lugar
+          value: "python"
+      text: https://primeirobit.livreware.org/curso/introducao-a-python/
+    - condition:
+        - type: slot
+          name: lugar
+          value: "inicial"
+      text: https://primeirobit.livreware.org/
+    - condition:
+        - type: slot
+          name: lugar
+          value: "email"
+      text: https://www.figma.com/proto/pyZRiRXp228nTmTu6ENThx/Untitled?node-id=86-379&p=f&t=xSx5flDDw6IGOmLW-0&scaling=min-zoom&content-scaling=fixed&page-id=86%3A2&starting-point-node-id=86%3A3
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+actions:
+- utter_finalizacao
+- utter_saudacao
+- utter_repetir_materia
+- utter_reformular
+- utter_default
+- utter_agradecimento
+- utter_menu
+- utter_perdido
+- utter_destino
+- utter_confirmacao

@@ -1,0 +1,41 @@
+version: "3.1"
+
+stories:
+
+- story: Procurando por uma materia
+  steps:
+  - intent: saudacao
+  - action: utter_saudacao
+  - checkpoint: fim_inicio_conversa
+
+
+- story: Procurando menu 
+  steps:
+  - checkpoint: fim_inicio_conversa
+  - intent: perdido
+  - action: utter_perdido
+  - intent: destino
+    entities:
+    - materia: true
+  - slot_was_set:
+    - lugar: true
+  - action: utter_destino
+  - action: utter_menu
+  - action: utter_confirmacao
+  - checkpoint: finalizacao_dialogo
+
+
+- story: Repetir materia
+  steps:
+  - checkpoint: fim_inicio_conversa
+  - intent: destino
+  - action: utter_repetir_materia
+  - checkpoint: fim_inicio_conversa
+
+
+
+- story: Finalização de Conversa
+  steps:
+  - checkpoint: finalizacao_dialogo
+  - intent: finalizacao
+  - action: utter_finalizacao
