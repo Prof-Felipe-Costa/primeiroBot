@@ -6,6 +6,9 @@ nlu:
     - python
     - inicial
     - email
+    - e-mail
+    - comprimindo
+    - comprimir
 
 - intent: saudacao
   examples: |
@@ -34,10 +37,18 @@ nlu:
   examples: |
     - Quero ir para o menu [inicial](materia)
     - Quero ir para o menu email
+    - Quero ir para o menu e-mail
     - Quero ir para o menu python
+    - Quero ir para o menu comprimindo
+    - Quero ir para o menu comprimir
     - Quero ir para a pagina inicial
     - quero ir para a pagina email
+    - quero ir para a pagina e-mail
     - quero ir para a pagina python
+    - Quero ir para a pagina comprimindo
+    - Quero ir para o pagina comprimir
+
+
 
 
 - intent: agradecimento

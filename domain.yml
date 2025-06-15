@@ -48,7 +48,22 @@ responses:
         - type: slot
           name: lugar
           value: "email"
-      text: https://www.figma.com/proto/pyZRiRXp228nTmTu6ENThx/Untitled?node-id=86-379&p=f&t=xSx5flDDw6IGOmLW-0&scaling=min-zoom&content-scaling=fixed&page-id=86%3A2&starting-point-node-id=86%3A3
+      text: https://primeirobit.livreware.org/curso/criando-uma-conta-de-e-mail/
+    - condition:
+        - type: slot
+          name: lugar
+          value: "e-mail"
+      text: https://primeirobit.livreware.org/curso/criando-uma-conta-de-e-mail/
+    - condition:
+        - type: slot
+          name: lugar
+          value: "comprimindo"
+      text: https://primeirobit.livreware.org/curso/comprimindo-e-extraindo-arquivos/
+    - condition:
+        - type: slot
+          name: lugar
+          value: "comprimir"
+      text: https://primeirobit.livreware.org/curso/comprimindo-e-extraindo-arquivos/
 
 session_config:
   session_expiration_time: 60
